@@ -1,0 +1,15 @@
+# Read input strings
+s = input().strip()
+t = input().strip()
+
+# Initial position of Liss (1-based index)
+position = 1  
+
+# Process each instruction in t
+for instruction in t:
+    # Check if Liss can move forward
+    if position <= len(s) and s[position - 1] == instruction:
+        position += 1  # Move to the next stone
+
+# Print the final position
+print(position)
